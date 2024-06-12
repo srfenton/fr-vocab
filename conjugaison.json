@@ -1,0 +1,682 @@
+{
+  "Être": {
+    "Présent": {
+      "je": "suis",
+      "tu": "es",
+      "il/elle/on": "est",
+      "nous": "sommes",
+      "vous": "êtes",
+      "ils/elles": "sont"
+    },
+    "Passé composé": {
+      "je": "ai été",
+      "tu": "as été",
+      "il/elle/on": "a été",
+      "nous": "avons été",
+      "vous": "avez été",
+      "ils/elles": "ont été"
+    },
+    "Imparfait": {
+      "je": "étais",
+      "tu": "étais",
+      "il/elle/on": "était",
+      "nous": "étions",
+      "vous": "étiez",
+      "ils/elles": "étaient"
+    },
+    "Futur simple": {
+      "je": "serai",
+      "tu": "seras",
+      "il/elle/on": "sera",
+      "nous": "serons",
+      "vous": "serez",
+      "ils/elles": "seront"
+    }
+  },
+  "Avoir": {
+    "Présent": {
+      "je": "ai",
+      "tu": "as",
+      "il/elle/on": "a",
+      "nous": "avons",
+      "vous": "avez",
+      "ils/elles": "ont"
+    },
+    "Passé composé": {
+      "je": "ai eu",
+      "tu": "as eu",
+      "il/elle/on": "a eu",
+      "nous": "avons eu",
+      "vous": "avez eu",
+      "ils/elles": "ont eu"
+    },
+    "Imparfait": {
+      "je": "avais",
+      "tu": "avais",
+      "il/elle/on": "avait",
+      "nous": "avions",
+      "vous": "aviez",
+      "ils/elles": "avaient"
+    },
+    "Futur simple": {
+      "je": "aurai",
+      "tu": "auras",
+      "il/elle/on": "aura",
+      "nous": "aurons",
+      "vous": "aurez",
+      "ils/elles": "auront"
+    }
+  },
+  "Aller": {
+    "Présent": {
+      "je": "vais",
+      "tu": "vas",
+      "il/elle/on": "va",
+      "nous": "allons",
+      "vous": "allez",
+      "ils/elles": "vont"
+    },
+    "Passé composé": {
+      "je": "suis allé(e)",
+      "tu": "es allé(e)",
+      "il/elle/on": "est allé(e)",
+      "nous": "sommes allé(e)s",
+      "vous": "êtes allé(e)(s)",
+      "ils/elles": "sont allé(e)s"
+    },
+    "Imparfait": {
+      "je": "allais",
+      "tu": "allais",
+      "il/elle/on": "allait",
+      "nous": "allions",
+      "vous": "alliez",
+      "ils/elles": "allaient"
+    },
+    "Futur simple": {
+      "je": "irai",
+      "tu": "iras",
+      "il/elle/on": "ira",
+      "nous": "irons",
+      "vous": "irez",
+      "ils/elles": "iront"
+    }
+  },
+  "Parler": {
+    "Présent": {
+      "je": "parle",
+      "tu": "parles",
+      "il/elle/on": "parle",
+      "nous": "parlons",
+      "vous": "parlez",
+      "ils/elles": "parlent"
+    },
+    "Passé composé": {
+      "je": "ai parlé",
+      "tu": "as parlé",
+      "il/elle/on": "a parlé",
+      "nous": "avons parlé",
+      "vous": "avez parlé",
+      "ils/elles": "ont parlé"
+    },
+    "Imparfait": {
+      "je": "parlais",
+      "tu": "parlais",
+      "il/elle/on": "parlait",
+      "nous": "parlions",
+      "vous": "parliez",
+      "ils/elles": "parlaient"
+    },
+    "Futur simple": {
+      "je": "parlerai",
+      "tu": "parleras",
+      "il/elle/on": "parlera",
+      "nous": "parlerons",
+      "vous": "parlerez",
+      "ils/elles": "parleront"
+    }
+  },
+  "Faire": {
+    "Présent": {
+      "je": "fais",
+      "tu": "fais",
+      "il/elle/on": "fait",
+      "nous": "faisons",
+      "vous": "faites",
+      "ils/elles": "font"
+    },
+    "Passé composé": {
+      "je": "ai fait",
+      "tu": "as fait",
+      "il/elle/on": "a fait",
+      "nous": "avons fait",
+      "vous": "avez fait",
+      "ils/elles": "ont fait"
+    },
+    "Imparfait": {
+      "je": "faisais",
+      "tu": "faisais",
+      "il/elle/on": "faisait",
+      "nous": "faisions",
+      "vous": "faisiez",
+      "ils/elles": "faisaient"
+    },
+    "Futur simple": {
+      "je": "ferai",
+      "tu": "feras",
+      "il/elle/on": "fera",
+      "nous": "ferons",
+      "vous": "ferez",
+      "ils/elles": "feront"
+    }
+  },
+  "Prendre": {
+    "Présent": {
+      "je": "prends",
+      "tu": "prends",
+      "il/elle/on": "prend",
+      "nous": "prenons",
+      "vous": "prenez",
+      "ils/elles": "prennent"
+    },
+    "Passé composé": {
+      "je": "ai pris",
+      "tu": "as pris",
+      "il/elle/on": "a pris",
+      "nous": "avons pris",
+      "vous": "avez pris",
+      "ils/elles": "ont pris"
+    },
+    "Imparfait": {
+      "je": "prenais",
+      "tu": "prenais",
+      "il/elle/on": "prenait",
+      "nous": "prenions",
+      "vous": "preniez",
+      "ils/elles": "prenaient"
+    },
+    "Futur simple": {
+      "je": "prendrai",
+      "tu": "prendras",
+      "il/elle/on": "prendra",
+      "nous": "prendrons",
+      "vous": "prendrez",
+      "ils/elles": "prendront"
+    }
+  },
+  "Vouloir": {
+    "Présent": {
+      "je": "veux",
+      "tu": "veux",
+      "il/elle/on": "veut",
+      "nous": "voulons",
+      "vous": "voulez",
+      "ils/elles": "veulent"
+    },
+    "Passé composé": {
+      "je": "ai voulu",
+      "tu": "as voulu",
+      "il/elle/on": "a voulu",
+      "nous": "avons voulu",
+      "vous": "avez voulu",
+      "ils/elles": "ont voulu"
+    },
+    "Imparfait": {
+      "je": "voulais",
+      "tu": "voulais",
+      "il/elle/on": "voulait",
+      "nous": "voulions",
+      "vous": "vouliez",
+      "ils/elles": "voulaient"
+    },
+    "Futur simple": {
+      "je": "voudrai",
+      "tu": "voudras",
+      "il/elle/on": "voudra",
+      "nous": "voudrons",
+      "vous": "voudrez",
+      "ils/elles": "voudront"
+    }
+  },
+  "Savoir": {
+    "Présent": {
+      "je": "sais",
+      "tu": "sais",
+      "il/elle/on": "sait",
+      "nous": "savons",
+      "vous": "savez",
+      "ils/elles": "savent"
+    },
+    "Passé composé": {
+      "je": "ai su",
+      "tu": "as su",
+      "il/elle/on": "a su",
+      "nous": "avons su",
+      "vous": "avez su",
+      "ils/elles": "ont su"
+    },
+    "Imparfait": {
+      "je": "savais",
+      "tu": "savais",
+      "il/elle/on": "savait",
+      "nous": "savions",
+      "vous": "saviez",
+      "ils/elles": "savaient"
+    },
+    "Futur simple": {
+      "je": "saurai",
+      "tu": "sauras",
+      "il/elle/on": "saura",
+      "nous": "saurons",
+      "vous": "saurez",
+      "ils/elles": "sauront"
+    }
+  },
+  "Pouvoir": {
+    "Présent": {
+      "je": "peux",
+      "tu": "peux",
+      "il/elle/on": "peut",
+      "nous": "pouvons",
+      "vous": "pouvez",
+      "ils/elles": "peuvent"
+    },
+    "Passé composé": {
+      "je": "ai pu",
+      "tu": "as pu",
+      "il/elle/on": "a pu",
+      "nous": "avons pu",
+      "vous": "avez pu",
+      "ils/elles": "ont pu"
+    },
+    "Imparfait": {
+      "je": "pouvais",
+      "tu": "pouvais",
+      "il/elle/on": "pouvait",
+      "nous": "pouvions",
+      "vous": "pouviez",
+      "ils/elles": "pouvaient"
+    },
+    "Futur simple": {
+      "je": "pourrai",
+      "tu": "pourras",
+      "il/elle/on": "pourra",
+      "nous": "pourrons",
+      "vous": "pourrez",
+      "ils/elles": "pourront"
+    }
+  },
+  "Venir": {
+    "Présent": {
+      "je": "viens",
+      "tu": "viens",
+      "il/elle/on": "vient",
+      "nous": "venons",
+      "vous": "venez",
+      "ils/elles": "viennent"
+    },
+    "Passé composé": {
+      "je": "suis venu(e)",
+      "tu": "es venu(e)",
+      "il/elle/on": "est venu(e)",
+      "nous": "sommes venu(e)s",
+      "vous": "êtes venu(e)(s)",
+      "ils/elles": "sont venu(e)s"
+    },
+    "Imparfait": {
+      "je": "venais",
+      "tu": "venais",
+      "il/elle/on": "venait",
+      "nous": "venions",
+      "vous": "veniez",
+      "ils/elles": "vendaient"
+    },
+    "Futur simple": {
+      "je": "viendrai",
+      "tu": "viendras",
+      "il/elle/on": "viendra",
+      "nous": "viendrons",
+      "vous": "viendrez",
+      "ils/elles": "viendront"
+    }
+  },
+  "Dire": {
+    "Présent": {
+      "je": "dis",
+      "tu": "dis",
+      "il/elle/on": "dit",
+      "nous": "disons",
+      "vous": "dites",
+      "ils/elles": "disent"
+    },
+    "Passé composé": {
+      "je": "ai dit",
+      "tu": "as dit",
+      "il/elle/on": "a dit",
+      "nous": "avons dit",
+      "vous": "avez dit",
+      "ils/elles": "ont dit"
+    },
+    "Imparfait": {
+      "je": "disais",
+      "tu": "disais",
+      "il/elle/on": "disait",
+      "nous": "disions",
+      "vous": "disiez",
+      "ils/elles": "disaient"
+    },
+    "Futur simple": {
+      "je": "dirai",
+      "tu": "diras",
+      "il/elle/on": "dira",
+      "nous": "dirons",
+      "vous": "direz",
+      "ils/elles": "diront"
+    }
+  },
+  "Donner": {
+    "Présent": {
+      "je": "donne",
+      "tu": "donnes",
+      "il/elle/on": "donne",
+      "nous": "donnons",
+      "vous": "donnez",
+      "ils/elles": "donnent"
+    },
+    "Passé composé": {
+      "je": "ai donné",
+      "tu": "as donné",
+      "il/elle/on": "a donné",
+      "nous": "avons donné",
+      "vous": "avez donné",
+      "ils/elles": "ont donné"
+    },
+    "Imparfait": {
+      "je": "donnais",
+      "tu": "donnais",
+      "il/elle/on": "donnait",
+      "nous": "donnions",
+      "vous": "donniez",
+      "ils/elles": "donnaient"
+    },
+    "Futur simple": {
+      "je": "donnerai",
+      "tu": "donneras",
+      "il/elle/on": "donnera",
+      "nous": "donnerons",
+      "vous": "donnerez",
+      "ils/elles": "donneront"
+    }
+  },
+  "Penser": {
+    "Présent": {
+      "je": "pense",
+      "tu": "penses",
+      "il/elle/on": "pense",
+      "nous": "pensons",
+      "vous": "pensez",
+      "ils/elles": "pensent"
+    },
+    "Passé composé": {
+      "je": "ai pensé",
+      "tu": "as pensé",
+      "il/elle/on": "a pensé",
+      "nous": "avons pensé",
+      "vous": "avez pensé",
+      "ils/elles": "ont pensé"
+    },
+    "Imparfait": {
+      "je": "pensais",
+      "tu": "pensais",
+      "il/elle/on": "pensait",
+      "nous": "pensions",
+      "vous": "pensiez",
+      "ils/elles": "pensaient"
+    },
+    "Futur simple": {
+      "je": "penserai",
+      "tu": "penseras",
+      "il/elle/on": "pensera",
+      "nous": "penserons",
+      "vous": "penserez",
+      "ils/elles": "penseront"
+    }
+  },
+  "Aider": {
+    "Présent": {
+      "je": "aide",
+      "tu": "aides",
+      "il/elle/on": "aide",
+      "nous": "aidons",
+      "vous": "aidez",
+      "ils/elles": "aident"
+    },
+    "Passé composé": {
+      "je": "ai aidé",
+      "tu": "as aidé",
+      "il/elle/on": "a aidé",
+      "nous": "avons aidé",
+      "vous": "avez aidé",
+      "ils/elles": "ont aidé"
+    },
+    "Imparfait": {
+      "je": "aidais",
+      "tu": "aidais",
+      "il/elle/on": "aidait",
+      "nous": "aidions",
+      "vous": "aidiez",
+      "ils/elles": "aidaient"
+    },
+    "Futur simple": {
+      "je": "aiderai",
+      "tu": "aideras",
+      "il/elle/on": "aidera",
+      "nous": "aiderons",
+      "vous": "aiderez",
+      "ils/elles": "aideront"
+    }
+  },
+  "Aimer": {
+    "Présent": {
+      "je": "aime",
+      "tu": "aimes",
+      "il/elle/on": "aime",
+      "nous": "aimons",
+      "vous": "aimez",
+      "ils/elles": "aiment"
+    },
+    "Passé composé": {
+      "je": "ai aimé",
+      "tu": "as aimé",
+      "il/elle/on": "a aimé",
+      "nous": "avons aimé",
+      "vous": "avez aimé",
+      "ils/elles": "ont aimé"
+    },
+    "Imparfait": {
+      "je": "aimais",
+      "tu": "aimais",
+      "il/elle/on": "aimait",
+      "nous": "aimions",
+      "vous": "aimiez",
+      "ils/elles": "aimaient"
+    },
+    "Futur simple": {
+      "je": "aimerai",
+      "tu": "aimeras",
+      "il/elle/on": "aimera",
+      "nous": "aimerons",
+      "vous": "aimerez",
+      "ils/elles": "aimeront"
+    }
+  },
+  "Devoir": {
+    "Présent": {
+      "je": "dois",
+      "tu": "dois",
+      "il/elle/on": "doit",
+      "nous": "devons",
+      "vous": "devez",
+      "ils/elles": "doivent"
+    },
+    "Passé composé": {
+      "je": "ai dû",
+      "tu": "as dû",
+      "il/elle/on": "a dû",
+      "nous": "avons dû",
+      "vous": "avez dû",
+      "ils/elles": "ont dû"
+    },
+    "Imparfait": {
+      "je": "devais",
+      "tu": "devais",
+      "il/elle/on": "devait",
+      "nous": "devions",
+      "vous": "deviez",
+      "ils/elles": "devaient"
+    },
+    "Futur simple": {
+      "je": "devrai",
+      "tu": "devras",
+      "il/elle/on": "devra",
+      "nous": "devrons",
+      "vous": "devrez",
+      "ils/elles": "devront"
+    }
+  },
+  "Habiter": {
+    "Présent": {
+      "je": "habite",
+      "tu": "habites",
+      "il/elle/on": "habite",
+      "nous": "habitons",
+      "vous": "habitez",
+      "ils/elles": "habitent"
+    },
+    "Passé composé": {
+      "je": "ai habité",
+      "tu": "as habité",
+      "il/elle/on": "a habité",
+      "nous": "avons habité",
+      "vous": "avez habité",
+      "ils/elles": "ont habité"
+    },
+    "Imparfait": {
+      "je": "habitais",
+      "tu": "habitais",
+      "il/elle/on": "habitait",
+      "nous": "habitions",
+      "vous": "habitiez",
+      "ils/elles": "habitaient"
+    },
+    "Futur simple": {
+      "je": "habiterai",
+      "tu": "habiteras",
+      "il/elle/on": "habitera",
+      "nous": "habiterons",
+      "vous": "habiterez",
+      "ils/elles": "habiteront"
+    }
+  },
+  "Regarder": {
+    "Présent": {
+      "je": "regarde",
+      "tu": "regardes",
+      "il/elle/on": "regarde",
+      "nous": "regardons",
+      "vous": "regardez",
+      "ils/elles": "regardent"
+    },
+    "Passé composé": {
+      "je": "ai regardé",
+      "tu": "as regardé",
+      "il/elle/on": "a regardé",
+      "nous": "avons regardé",
+      "vous": "avez regardé",
+      "ils/elles": "ont regardé"
+    },
+    "Imparfait": {
+      "je": "regardais",
+      "tu": "regardais",
+      "il/elle/on": "regardait",
+      "nous": "regardions",
+      "vous": "regardiez",
+      "ils/elles": "regardaient"
+    },
+    "Futur simple": {
+      "je": "regarderai",
+      "tu": "regarderas",
+      "il/elle/on": "regardera",
+      "nous": "regarderons",
+      "vous": "regarderez",
+      "ils/elles": "regarderont"
+    }
+  },
+  "Utiliser": {
+    "Présent": {
+      "je": "utilise",
+      "tu": "utilises",
+      "il/elle/on": "utilise",
+      "nous": "utilisons",
+      "vous": "utilisez",
+      "ils/elles": "utilisent"
+    },
+    "Passé composé": {
+      "je": "ai utilisé",
+      "tu": "as utilisé",
+      "il/elle/on": "a utilisé",
+      "nous": "avons utilisé",
+      "vous": "avez utilisé",
+      "ils/elles": "ont utilisé"
+    },
+    "Imparfait": {
+      "je": "utilisais",
+      "tu": "utilisais",
+      "il/elle/on": "utilisait",
+      "nous": "utilisions",
+      "vous": "utilisiez",
+      "ils/elles": "utilisaient"
+    },
+    "Futur simple": {
+      "je": "utiliserai",
+      "tu": "utiliseras",
+      "il/elle/on": "utilisera",
+      "nous": "utiliserons",
+      "vous": "utiliserez",
+      "ils/elles": "utiliseront"
+    }
+  },
+  "Essayer": {
+    "Présent": {
+      "je": "essaie",
+      "tu": "essaies",
+      "il/elle/on": "essaie",
+      "nous": "essayons",
+      "vous": "essayez",
+      "ils/elles": "essaient"
+    },
+    "Passé composé": {
+      "je": "ai essayé",
+      "tu": "as essayé",
+      "il/elle/on": "a essayé",
+      "nous": "avons essayé",
+      "vous": "avez essayé",
+      "ils/elles": "ont essayé"
+    },
+    "Imparfait": {
+      "je": "essayais",
+      "tu": "essayais",
+      "il/elle/on": "essayait",
+      "nous": "essayions",
+      "vous": "essayiez",
+      "ils/elles": "essaient"
+    },
+    "Futur simple": {
+      "je": "essaierai",
+      "tu": "essaieras",
+      "il/elle/on": "essaiera",
+      "nous": "essaierons",
+      "vous": "essaierez",
+      "ils/elles": "essaieront"
+    }
+  }
+}
