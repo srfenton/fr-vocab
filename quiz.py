@@ -9,7 +9,8 @@ vocab_choices_list = []
 try:
     with os.scandir(directory) as entries:
         for entry in entries:
-            vocab_choices_list.append(entry.name)
+            if '.json' in entry.name:
+              vocab_choices_list.append(entry.name)
 
 except FileNotFoundError:
     print(f"The directory {directory} does not exist.")
@@ -26,28 +27,58 @@ for x in vocab_choices_list:
     vocab_choices_dict[str(vocab_index_number)] = x
     vocab_index_number += 1
 
-vocab_choice = input('Please enter the number corresponding to the vocab file you wish to study followed by enter: ')
-while vocab_choice not in vocab_choices_dict:
-    print('Please enter a valid response.')
-    vocab_choice = input('Please enter the number corresponding to the vocab file you wish to study followed by enter: ') 
+def get_valid_user_selection(choices, expected_type=str):
+    while True:
+        response = input().strip()
+        if response.lower() == 'exit':
+            sys.exit()
+
+        try:
+            # Try to convert the response to the expected type
+            converted_response = expected_type(response)
+        except ValueError:
+            print(f'\nPlease enter a valid selection.')
+            continue
+        if converted_response in choices:
+            return converted_response
+        else:
+            print('\nPlease enter a valid selection.')
+
+def get_valid_user_selection(choices):
+   response = input('\n')
+   while response not in choices:
+      if response.strip().lower() == 'exit':
+        print('thanks for studying!')
+        sys.exit()
+      print('\nplease enter a valid selection \n')
+      return get_valid_user_selection(choices)
+    
+   return response
+
+
+vocab_choice = get_valid_user_selection(vocab_choices_dict)
 selected_lesson = vocab_choices_dict[vocab_choice]
 
 
 vocabulary = {}
 french_words = []
 english_words = []
+print(f'you have selected {selected_lesson} \n')
+print('type exit anytime to end your session \n')
+
 try:
   with open(f'vocab/{selected_lesson}', 'r', encoding='utf-8') as f:
-    for x in f:
-      unpacked = x.split(',')
-      french_translation = unpacked[0].strip()
-      french_words.append(french_translation)
-      english_translation = unpacked[1].strip() 
-      vocabulary[french_translation] = english_translation
-      english_words.append(english_translation)
+    data = json.load(f)
+    vocabulary = data['translations']
+    french_words = list(vocabulary.keys())
+    for x in french_words:
+        english_words.append(vocabulary[x])
+    f.close()
+    
 except:
   print('invalid vocabulary file.')
   sys.exit()
+
 
 random.shuffle(french_words)
 
@@ -69,21 +100,37 @@ def question_generator(french_word):
 
   return choices
 
-
 correct = 0
 incorrect = 0
 missed_words = []
-for x in range(0,len(french_words)):
+
+def print_missed_words():
+  print(f'your missed words are:')
+  for x in missed_words:
+    print(f'{x} ({vocabulary[x]})')
+test_length_choices = [('short', 5),('full length', len(french_words)),('infinite', 99999999999999999999999999999999)]
+
+for i, (name, length) in enumerate(test_length_choices):
+    print(f'{i}. {name}')
+
+print('\nselect your test length: ')
+
+test_length_preference = get_valid_user_selection([str(i) for i in range(len(test_length_choices))]) #this list comprehension unpacks the test length choices to ensure the input we get is valid
+test_length = test_length_choices[int(test_length_preference)][1]
+
+for x in range(0,test_length):
   multiple_choice_letters_list = ['a','b','c','d']
-  current_word_french = french_words[x]
+  if test_length_choices[int(test_length_preference)][0] != 'infinite':
+    current_word_french = french_words[x] 
+  else:
+    current_word_french = random.choice(french_words)
   print(f'\n {str(x+1)} . {current_word_french} \n')
   choices_dict = question_generator(current_word_french)
   for x in range(0,len(multiple_choice_letters_list)):
     print(f'{multiple_choice_letters_list[x]}. {choices_dict[multiple_choice_letters_list[x]]}')
-  response = input('\n Enter your response: ').strip()
-  while response not in multiple_choice_letters_list:
-    print('please enter a valid response (a, b, c or d) followed by enter/return')
-    response = input('\n Enter your response: ').strip()
+  
+  response = get_valid_user_selection(multiple_choice_letters_list)
+
   if choices_dict[response] == vocabulary[current_word_french]:
     print('correct')
     correct += 1
@@ -93,7 +140,6 @@ for x in range(0,len(french_words)):
     missed_words.append(current_word_french)
     print(f'\n the correct answer is: {vocabulary[current_word_french]} \n')
 
-print(f'score: {correct} / {len(french_words)}')
-print(f'your missed words are:')
-for x in missed_words:
-  print(x)
+if test_length_choices[int(test_length_preference)][0] in ['short', 'full']:
+  print(f'score: {correct} / {test_length}')
+  print_missed_words()

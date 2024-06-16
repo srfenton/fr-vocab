@@ -1,0 +1,26 @@
+{
+    "title": "Les moyens de transport",
+    "translations": {
+      "Gare": "Train station",
+      "Aéroport": "Airport",
+      "Voiture": "Car",
+      "Bus": "Bus",
+      "Taxi": "Taxi",
+      "Passager": "Passenger",
+      "Bagages": "Luggage",
+      "Passeport": "Passport",
+      "Douane": "Customs",
+      "Itinéraire": "Route/Itinerary",
+      "Compagnie aérienne": "Airline",
+      "Hébergement": "Accommodation",
+      "Location de voiture": "Car rental",
+      "Billet d'avion": "Airplane ticket",
+      "Départ": "Departure",
+      "Arrivée": "Arrival",
+      "Quai": "Platform",
+      "Annulation": "Cancellation",
+      "Réservation": "Reservation",
+      "Guide touristique": "Tour guide"
+    }
+  }
+  

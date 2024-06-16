@@ -1,0 +1,26 @@
+{
+    "title": "Les animaux",
+    "translations": {
+      "Chien": "Dog",
+      "Chat": "Cat",
+      "Oiseau": "Bird",
+      "Poisson": "Fish",
+      "Cheval": "Horse",
+      "Vache": "Cow",
+      "Mouton": "Sheep",
+      "Cochon": "Pig",
+      "Lapin": "Rabbit",
+      "Souris": "Mouse",
+      "Canard": "Duck",
+      "Poulet": "Chicken",
+      "Chèvre": "Goat",
+      "Serpent": "Snake",
+      "Tortue": "Turtle",
+      "Lion": "Lion",
+      "Tigre": "Tiger",
+      "Ours": "Bear",
+      "Éléphant": "Elephant",
+      "Giraffe": "Giraffe"
+    }
+  }
+  

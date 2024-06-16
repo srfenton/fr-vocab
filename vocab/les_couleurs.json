@@ -1,0 +1,26 @@
+{
+    "title": "Les couleurs",
+    "translations": {
+      "Rouge": "Red",
+      "Bleu": "Blue",
+      "Vert": "Green",
+      "Jaune": "Yellow",
+      "Noir": "Black",
+      "Blanc": "White",
+      "Gris": "Gray",
+      "Rose": "Pink",
+      "Violet": "Purple",
+      "Orange": "Orange",
+      "Marron": "Brown",
+      "Beige": "Beige",
+      "Turquoise": "Turquoise",
+      "Bordeaux": "Burgundy",
+      "Or": "Gold",
+      "Argent": "Silver",
+      "Écarlate": "Scarlet",
+      "Magenta": "Magenta",
+      "Cyan": "Cyan",
+      "Indigo": "Indigo"
+    }
+  }
+  

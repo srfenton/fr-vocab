@@ -1,0 +1,24 @@
+{
+    "title": "Les Parties du Corps",
+    "translations": {
+        "le corps": "the body",
+        "la partie du corps": "the part of the body",
+        "la tête": "the head",
+        "le visage": "the face",
+        "les yeux": "the eyes",
+        "la bouche": "the mouth",
+        "la dent": "the tooth",
+        "le nez": "the nose",
+        "l’oreille": "the ear",
+        "les cheveux": "the hair",
+        "le cou": "the neck",
+        "le dos": "the back",
+        "le ventre": "the stomach",
+        "la jambe": "the leg",
+        "le genou": "the knee",
+        "le pied": "the foot",
+        "le bras": "the arm",
+        "la main": "the hand",
+        "le doigt": "the finger"
+    }
+}

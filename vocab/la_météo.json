@@ -1,0 +1,26 @@
+{
+    "title": "La météo",
+    "translations": {
+      "Température": "Temperature",
+      "Soleil": "Sun",
+      "Pluie": "Rain",
+      "Neige": "Snow",
+      "Vent": "Wind",
+      "Nuages": "Clouds",
+      "Orage": "Storm",
+      "Éclair": "Lightning",
+      "Prévision": "Forecast",
+      "Étoiles": "Stars",
+      "Brouillard": "Fog",
+      "Parapluie": "Umbrella",
+      "Été": "Summer",
+      "Automne": "Autumn",
+      "Hiver": "Winter",
+      "Printemps": "Spring",
+      "Tornade": "Tornado",
+      "Gel": "Frost",
+      "Chaleur": "Heat",
+      "Précipitations": "Precipitation"
+    }
+  }
+  
