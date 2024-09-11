@@ -2,8 +2,24 @@ from quiz import generate_vocab_choices_list, generate_vocab_choices_dict, get_v
 from bottle import route, run, template
 
 
-@route('/hello/<name>')
-def index(name):
-    return template('<b>Hello {{name}}</b>!', name=name)
+@route('/')
+def index():
+    return template('index.tpl')
+
+
+@route('/lessons')
+def get_lessons():
+    vocab_choices_list = generate_vocab_choices_list()
+    return template('lessons.tpl', lessons=vocab_choices_list)
+
+@post('/select/<lesson>')
+def post_selected_lesson(lesson):
+    redirect(f'/quiz/{lesson}')
+
+
+@route('quiz/<lesson>')
+
+
+
 
 run(host='localhost', port=8080)
