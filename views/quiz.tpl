@@ -1,5 +1,5 @@
 <table>
-  % for x in lessons:
+  % for x in vocab_dict:
     <tr>
       <td>{{x}}</td>
       <td>
