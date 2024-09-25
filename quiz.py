@@ -86,6 +86,13 @@ def print_missed_words(missed_words, vocabulary):
     for x in missed_words:
         print(f'{x} ({vocabulary[x]})')
 
+def generate_quiz_questions(combined_vocabulary_dict):
+    french_words = combined_vocabulary_dict['french_words']
+    quiz_questions = ()
+    for x in range(french_words):
+        quiz_questions.append(question_generator(x,combined_vocabulary_dict))
+        
+
 def quiz(test_length, test_length_choices, combined_vocabulary_dict):
     correct = 0
     incorrect = 0

@@ -1,4 +1,4 @@
-from quiz import generate_vocab_choices_list, generate_vocab_choices_dict, generate_combined_vocabulary_dict, get_valid_user_selection, generate_combined_vocabulary_dict, question_generator, print_missed_words, quiz
+from quiz import generate_vocab_choices_list, generate_quiz_questions, generate_vocab_choices_dict, generate_combined_vocabulary_dict, get_valid_user_selection, generate_combined_vocabulary_dict, question_generator, print_missed_words, quiz
 from bottle import route, post, request, run, template, redirect
 
 index = {} #until session management
@@ -22,6 +22,9 @@ def post_selected_lesson():
 @route('/quiz/<selected_lesson>')
 def get_selected_lesson(selected_lesson):
     vocab_dict = generate_combined_vocabulary_dict(selected_lesson)
+    quiz_questions = generate_quiz_questions(vocab_dict)
+
+    
     return template('quiz.tpl', vocab_dict=vocab_dict.get('vocabulary'))
 
 
