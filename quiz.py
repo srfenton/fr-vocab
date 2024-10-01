@@ -91,6 +91,8 @@ def generate_quiz_questions(combined_vocabulary_dict):
     quiz_questions = ()
     for x in range(french_words):
         quiz_questions.append(question_generator(x,combined_vocabulary_dict))
+
+    return quiz_questions
         
 
 def quiz(test_length, test_length_choices, combined_vocabulary_dict):
