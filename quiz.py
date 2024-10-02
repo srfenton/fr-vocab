@@ -61,11 +61,12 @@ def generate_combined_vocabulary_dict(selected_lesson):
 
     return {'vocabulary': vocabulary, 'french_words': french_words, 'english_words': english_words}
 
+#i do not need the multple choice letters to be called out. remove them from a dictionary and put them in a list or tuple.
 def question_generator(current_word_french, combined_vocabulary_dict):
     english_words = combined_vocabulary_dict['english_words']
     vocabulary = combined_vocabulary_dict['vocabulary']
     answers = []
-    choices = {}
+    choices = []
     english_words_copy = english_words.copy()
     english_words_copy.remove(vocabulary[current_word_french])
     random.shuffle(english_words_copy)
@@ -74,12 +75,8 @@ def question_generator(current_word_french, combined_vocabulary_dict):
     correct_answer = vocabulary[current_word_french]
     answers.append(correct_answer)
     random.shuffle(answers)
-    choices['a'] = answers[0]
-    choices['b'] = answers[1]
-    choices['c'] = answers[2]
-    choices['d'] = answers[3]
 
-    return choices
+    return (current_word_french, correct_answer, answers)
 
 def print_missed_words(missed_words, vocabulary):
     print('Your missed words are:')
@@ -88,8 +85,8 @@ def print_missed_words(missed_words, vocabulary):
 
 def generate_quiz_questions(combined_vocabulary_dict):
     french_words = combined_vocabulary_dict['french_words']
-    quiz_questions = ()
-    for x in range(french_words):
+    quiz_questions = []
+    for x in french_words:
         quiz_questions.append(question_generator(x,combined_vocabulary_dict))
 
     return quiz_questions
@@ -129,20 +126,31 @@ def quiz(test_length, test_length_choices, combined_vocabulary_dict):
         print_missed_words(missed_words, vocabulary)
 
 if __name__ == "__main__":
-    vocab_choices_list = generate_vocab_choices_list()
-    vocab_choices_dict = generate_vocab_choices_dict(vocab_choices_list)
-    vocab_choice = get_valid_user_selection(vocab_choices_dict)
-    selected_lesson = vocab_choices_dict[vocab_choice]
+    vocab_dict = generate_combined_vocabulary_dict('les_animaux.json')
+    quiz_questions = generate_quiz_questions(vocab_dict)
+    print(quiz_questions[0])
 
-    combined_vocabulary_dict = generate_combined_vocabulary_dict(selected_lesson)
 
-    test_length_choices = [('short', 5), ('full length', len(combined_vocabulary_dict['french_words'])), ('infinite', 99999999999999999999999999999999)]
 
-    for i, (name, length) in enumerate(test_length_choices):
-        print(f'{i}. {name}')
 
-    print('\nSelect your test length: ')
-    test_length_preference = get_valid_user_selection([str(i) for i in range(len(test_length_choices))])
-    test_length = test_length_choices[int(test_length_preference)][1]
 
-    quiz(test_length, test_length_choices, combined_vocabulary_dict)
+
+#######################################################################################################################################################################################
+    #below are outdated testing function calls from before this was a web app. To be cleaned soon.
+    # vocab_choices_list = generate_vocab_choices_list()
+    # vocab_choices_dict = generate_vocab_choices_dict(vocab_choices_list)
+    # vocab_choice = get_valid_user_selection(vocab_choices_dict)
+    # selected_lesson = vocab_choices_dict[vocab_choice]
+
+    # combined_vocabulary_dict = generate_combined_vocabulary_dict(selected_lesson)
+
+    # test_length_choices = [('short', 5), ('full length', len(combined_vocabulary_dict['french_words'])), ('infinite', 99999999999999999999999999999999)]
+
+    # for i, (name, length) in enumerate(test_length_choices):
+    #     print(f'{i}. {name}')
+
+    # print('\nSelect your test length: ')
+    # test_length_preference = get_valid_user_selection([str(i) for i in range(len(test_length_choices))])
+    # test_length = test_length_choices[int(test_length_preference)][1]
+
+    # quiz(test_length, test_length_choices, combined_vocabulary_dict)
