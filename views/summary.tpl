@@ -1,5 +1,5 @@
-<table>
-  % for x in lessons:
+<!-- <table>
+  % for x in summary:
     <tr>
       <td>{{x}}</td>
       <td>
@@ -11,4 +11,5 @@
     </tr>
 
   % end
-</table>
+</table> -->
+<p>all done!</p>
