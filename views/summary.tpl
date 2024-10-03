@@ -1,15 +1,18 @@
-<!-- <table>
-  % for x in summary:
+<p>all done!</p>
+<p>score: {{score}}/{{question_count}}</p>
+<table>
+  % for x in missed_words:
     <tr>
       <td>{{x}}</td>
-      <td>
-        <form action="/select" method="post">
-        <input name="selected_lesson" type="hidden" value="{{x}}"/>
-        <button type="submit">{{x}}</button>
-      </form>
-      </td>
     </tr>
 
   % end
-</table> -->
+</table> 
 <p>all done!</p>
+
+
+
+<form action="/reset" method="post">
+    <input name="selected_lesson" type="hidden"/>
+    <button type="submit">reset & go home</button>
+  </form>
