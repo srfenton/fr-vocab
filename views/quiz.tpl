@@ -18,10 +18,10 @@
         tr {
             margin: 2px 0; /* Reduce space between items */
             text-align: center;
+        }
         td {
             padding: 10px; /* Add padding to table cells */
             text-align: center;
-        }
         }
         .answer-choices {
             text-decoration: none; /* Remove underline */
