@@ -1,6 +1,7 @@
 from quiz import generate_vocab_choices_list, generate_quiz_questions, generate_vocab_choices_dict, generate_combined_vocabulary_dict, get_valid_user_selection, generate_combined_vocabulary_dict, question_generator, print_missed_words, quiz
 from bottle import route, post, request, run, template, redirect, response
 from session_manager import random_id
+from unicodedata import normalize
 
 index = {} 
 missed_words = {}
@@ -27,7 +28,8 @@ def get_lessons():
 
 @post('/select')
 def post_selected_lesson():
-    selected_lesson = request.forms.get('selected_lesson')
+    selected_lesson = request.forms.getunicode('selected_lesson')
+    selected_lesson = normalize('NFC', selected_lesson)
     session_id = request.get_cookie("session_id")
     # question_index = index[session_id]
     vocab_dict = generate_combined_vocabulary_dict(selected_lesson)

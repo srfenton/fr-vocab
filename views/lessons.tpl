@@ -42,7 +42,6 @@
   <table>
     % for x in lessons:
       <tr>
-        <td>{{x}}</td>
         <td>
           <form action="/select" method="post">
           <input name="selected_lesson" type="hidden" value="{{x}}"/>

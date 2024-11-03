@@ -1,6 +1,0 @@
-Gauche, Left
-Droite, Right
-Devant, Front
-Derrière, Behind
-Au-dessus, Above
-En dessous, Below

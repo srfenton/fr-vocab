@@ -46,19 +46,24 @@ def generate_combined_vocabulary_dict(selected_lesson):
     vocabulary = {}
     french_words = []
     english_words = []
+    vocab_path = os.path.join('vocab', selected_lesson)
+
     try:
-        with open(f'vocab/{selected_lesson}', 'r', encoding='utf-8') as f:
+        with open(vocab_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             vocabulary = data['translations']
             french_words = list(vocabulary.keys())
             for x in french_words:
                 english_words.append(vocabulary[x])
             f.close()
-    except:
-        print('Invalid vocabulary file.')
+    except FileNotFoundError:
+        print(f"File not found: {vocab_path}. Please check the filename and directory.")
         sys.exit()
-    random.shuffle(french_words)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        sys.exit()
 
+    random.shuffle(french_words)
     return {'vocabulary': vocabulary, 'french_words': french_words, 'english_words': english_words}
 
 #i do not need the multple choice letters to be called out. remove them from a dictionary and put them in a list or tuple.
