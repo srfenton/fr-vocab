@@ -1,0 +1,25 @@
+{
+    "title": "Les mots interrogatifs",
+    "translations": {
+        "Qui": "Who",
+        "Que": "What",
+        "Quoi": "What (informal)",
+        "Où": "Where",
+        "Quand": "When",
+        "Pourquoi": "Why",
+        "Comment": "How",
+        "Combien": "How much/many",
+        "Lequel": "Which (masculine singular)",
+        "Laquelle": "Which (feminine singular)",
+        "Lesquels": "Which (masculine plural)",
+        "Lesquelles": "Which (feminine plural)",
+        "Quel": "What/Which (masculine singular)",
+        "Quelle": "What/Which (feminine singular)",
+        "Quels": "What/Which (masculine plural)",
+        "Quelles": "What/Which (feminine plural)",
+        "À qui": "To whom",
+        "De qui": "From whom",
+        "Avec qui": "With whom",
+        "Pour qui": "For whom"
+    }
+}
