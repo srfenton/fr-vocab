@@ -10,6 +10,11 @@ docker-compose.yml
 .dockerignore
 requirements.txt
 
+#cache files
+__pycache__/
+*.pyo
+*.pyd
+
 # Temporary files and swap files
 *.swp
 
