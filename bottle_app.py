@@ -16,9 +16,14 @@ def home():
     if not session_id:
         session_id = random_id()
         response.set_cookie("session_id", session_id)
-    index[session_id] = 0
+        index[session_id] = 0  # Initialize for new sessions
+    elif index.get(session_id, 0) > 0:
+        redirect('/quiz')
+    else:
+        index[session_id] = 0  # Explicitly reset if returning to start
 
     return template('index.tpl')
+
 
 
 @route('/lessons')
