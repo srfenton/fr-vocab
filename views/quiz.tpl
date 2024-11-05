@@ -91,7 +91,9 @@
         % for x in current_question[2]:
             <tr>
                 <td>
-                    <button class="answer-choices" onclick="handleButtonClick('{{current_question[1]}}','{{x}}')">{{x}}</button>
+                    <!--<button class="answer-choices" onclick="handleButtonClick('{{current_question[1]}}','{{x}}')">{{x}}</button>-->
+                    <button class="answer-choices" data-correct-answer="{{current_question[1]}}" data-selected-answer="{{x}}" onclick="handleButtonClick(this)">{{x}}</button>
+
                 </td>
             </tr>
         % end
@@ -123,12 +125,15 @@
             document.getElementById("missedWordInput").value = correct_answer;
         }
         
-        function handleButtonClick(correct_answer, selectedAnswer) {
+        //function handleButtonClick(correct_answer, selectedAnswer) {
+        function handleButtonClick(buttonElement) {
+            const correct_answer = decodeURIComponent(buttonElement.getAttribute('data-correct-answer'));
+            const selectedAnswer = decodeURIComponent(buttonElement.getAttribute('data-selected-answer'));
             evaluateAnswer(correct_answer, selectedAnswer);
     
             setTimeout(function() {
                 document.getElementById('button-0').click(); 
-            }, 500);
+            }, 750);
         }
 
         function showAlert(alertId) {

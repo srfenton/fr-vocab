@@ -3,6 +3,7 @@ from bottle import route, post, request, run, template, redirect, response
 from session_manager import random_id
 from unicodedata import normalize
 
+
 index = {} 
 missed_words = {}
 quiz_questions_dict = {}
@@ -38,6 +39,9 @@ def post_selected_lesson():
     missed_words[session_id] = []
     redirect(f'/quiz')
 
+def escape_js_string(s):
+    """Escape single quotes and backslashes for safe inclusion in JavaScript."""
+    return s.replace("\\", "\\\\").replace("'", "\\'")
 
 @route('/quiz')
 def get_quiz_question():
@@ -49,6 +53,8 @@ def get_quiz_question():
     question_index = index[session_id]
     if question_index < question_count[session_id]:
         current_question = quiz_questions_dict[session_id][question_index]
+        
+        print(current_question)
         return template('quiz.tpl', question_index = question_index, question_count = question_count[session_id], current_question = current_question)
     
     else:   

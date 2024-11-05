@@ -53,6 +53,7 @@ def generate_combined_vocabulary_dict(selected_lesson):
             data = json.load(f)
             vocabulary = data['translations']
             french_words = list(vocabulary.keys())
+            print(french_words)
             for x in french_words:
                 english_words.append(vocabulary[x])
             f.close()
