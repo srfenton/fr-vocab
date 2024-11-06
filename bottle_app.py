@@ -17,7 +17,7 @@ def home():
         session_id = random_id()
         response.set_cookie("session_id", session_id)
         index[session_id] = 0  # Initialize for new sessions
-    elif index.get(session_id, 0) > 0:
+    elif index.get(session_id, 0) >= 0: #i am not done testing continuity here. 
         redirect('/quiz')
     else:
         index[session_id] = 0  # Explicitly reset if returning to start
@@ -30,6 +30,7 @@ def home():
 def get_lessons():
     vocab_choices_list = generate_vocab_choices_list()
     session_id = request.get_cookie("session_id")
+    index[session_id] = 0
     return template('lessons.tpl', lessons=vocab_choices_list)
 
 @post('/select')
@@ -83,7 +84,7 @@ def get_next():
     redirect(f'/quiz')
     
 @post('/reset')
-def get_reset():
+def post_reset():
     session_id = request.get_cookie("session_id")
     index.pop(session_id)
     missed_words.pop(session_id)
