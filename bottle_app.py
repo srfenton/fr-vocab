@@ -45,10 +45,6 @@ def post_selected_lesson():
     missed_words[session_id] = []
     redirect(f'/quiz')
 
-def escape_js_string(s):
-    """Escape single quotes and backslashes for safe inclusion in JavaScript."""
-    return s.replace("\\", "\\\\").replace("'", "\\'")
-
 @route('/quiz')
 def get_quiz_question():
     session_id = request.get_cookie("session_id")
