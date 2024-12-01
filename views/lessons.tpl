@@ -8,33 +8,34 @@
     /* General page setup */
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background-color: #f9f9fb;
-        color: #1d1d1f;
+        background-color: #f9f9fb; /* Light background */
+        color: #1d1d1f; /* Neutral text color */
         margin: 0;
         padding: 0;
         display: flex;
         min-height: 100vh;
     }
 
-    /* Sidebar for vertical "Lessons" text */
+    /* Sidebar styling */
     .sidebar {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f9f9fb; /* Same color as main area for seamless transition */
+        background-color: #f9f9fb;
         padding: 10px;
         min-width: 100px;
+        border-right: 1px solid #e3e4e8; /* Subtle border for separation */
     }
 
     .sidebar .vertical-text {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 3.5rem; /* Default large font size */
+        font-size: 2.5rem; /* Large font size */
         letter-spacing: 0.15rem;
-        color: #1d1d1f;
-        text-align: center;
+        color: #2d2d2d;
         margin: 0;
+        font-weight: bold;
     }
 
     /* Main content container */
@@ -44,7 +45,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #f9f9fb; /* Same color as sidebar for seamless integration */
+        background-color: #ffffff; /* White main area */
     }
 
     /* Table layout */
@@ -55,43 +56,43 @@
         border-spacing: 12px;
     }
 
-    /* Borderless button styling */
+    /* Button styling */
     .button {
         padding: 12px 24px;
         font-size: 1rem;
         color: #333;
-        background-color: #fff;
-        border: none; /* No border */
-        border-radius: 8px;
+        background-color: #ffffff;
+        border: 1px solid #e3e4e8; /* Subtle border for buttons */
+        border-radius: 8px; /* Rounded corners */
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-        width: 80%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow */
         text-align: center;
     }
 
-    /* Hover effect for buttons */
+    /* Button hover effect */
     .button:hover {
         background-color: #f1f1f4;
+        border-color: #d1d1d4; /* Slightly darker border on hover */
         transform: translateY(-2px);
     }
 
-    /* Active button effect */
+    /* Button active effect */
     .button:active {
-        background-color: #e5e5ea;
+        background-color: #e9e9eb;
         transform: translateY(0);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
-    /* Mobile responsiveness adjustments */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
         .sidebar {
-            min-width: 50px; /* Reduce the sidebar width on mobile */
+            min-width: 60px; /* Narrower sidebar on smaller screens */
         }
 
         .sidebar .vertical-text {
-            font-size: 2.5rem; /* Smaller font size for mobile */
-            letter-spacing: 0.1rem; /* Slightly reduced spacing */
+            font-size: 2rem; /* Slightly smaller font for mobile */
+            letter-spacing: 0.1rem;
         }
 
         .container {
@@ -99,7 +100,7 @@
         }
 
         .button {
-            font-size: 0.9rem; /* Slightly smaller button text */
+            font-size: 0.9rem; /* Smaller button text on mobile */
             padding: 10px 20px;
         }
     }
