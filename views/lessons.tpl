@@ -16,27 +16,6 @@
         min-height: 100vh;
     }
 
-    /* Sidebar styling */
-    .sidebar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f9f9fb;
-        padding: 10px;
-        min-width: 100px;
-        border-right: 1px solid #e3e4e8; /* Subtle border for separation */
-    }
-
-    .sidebar .vertical-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 2.5rem; /* Large font size */
-        letter-spacing: 0.15rem;
-        color: #2d2d2d;
-        margin: 0;
-        font-weight: bold;
-    }
 
     /* Main content container */
     .container {
@@ -107,17 +86,6 @@
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <div class="vertical-text">
-      <span>L</span>
-      <span>E</span>
-      <span>S</span>
-      <span>S</span>
-      <span>O</span>
-      <span>N</span>
-      <span>S</span>
-    </div>
-  </div>
   <div class="container">
     <table>
       % for x in lessons:
@@ -130,6 +98,14 @@
           </td>
         </tr>
       % end
+        <tr>
+    <td>
+          <form action="/select" method="post">
+            <input name="selected_lesson" type="hidden" value="combined"/>
+            <button type="submit" class="button">Combined</button>
+          </form>
+        </td>
+      </tr>
     </table>
   </div>
 </body>

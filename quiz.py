@@ -22,6 +22,26 @@ def generate_vocab_choices_list():
 
     return vocab_choices_list
 
+def generate_combined_vocab_lesson():
+    combined_vocab_lesson = {}
+    combined_vocab_lesson.update({'vocabulary' : {}})
+    combined_vocab_lesson.update({'english_words' :[]})
+    combined_vocab_lesson.update({'french_words' :[]})
+    choices = generate_vocab_choices_list()
+    for x in choices:
+        current_lesson = generate_combined_vocabulary_dict(x)
+        combined_vocab_lesson.update({'vocabulary': combined_vocab_lesson['vocabulary'] | current_lesson['vocabulary']})
+        combined_vocab_lesson.update({'french_words': combined_vocab_lesson['french_words'] + current_lesson['french_words']})
+        combined_vocab_lesson.update({'english_words': combined_vocab_lesson['english_words'] + current_lesson['english_words']})
+    
+    random.shuffle(combined_vocab_lesson['french_words'])
+    random.shuffle(combined_vocab_lesson['english_words'])
+
+
+    return combined_vocab_lesson
+
+
+
 def generate_vocab_choices_dict(vocab_choices_list):
     vocab_choices_dict = {}
     vocab_index_number = 1
@@ -53,7 +73,7 @@ def generate_combined_vocabulary_dict(selected_lesson):
             data = json.load(f)
             vocabulary = data['translations']
             french_words = list(vocabulary.keys())
-            print(french_words)
+            # print(french_words)
             for x in french_words:
                 english_words.append(vocabulary[x])
             f.close()
@@ -137,35 +157,38 @@ def quiz(test_length, test_length_choices, combined_vocabulary_dict):
 if __name__ == "__main__":
     #testing function calls below:
     # vocab_dict = generate_combined_vocabulary_dict('les_animaux.json')
+    # print(vocab_dict)
     # quiz_questions = generate_quiz_questions(vocab_dict)
     # print(quiz_questions[0])
+    combined_lessons_test = generate_combined_vocab_lesson()
+    # print(combined_lessons_test.items())
 
 
 #######################################################################################################################################################################################
-    #CLI version of the program below:
+    # CLI version of the program below (uncomment below if you prefer to use it this way and this section is commented out because i was lazy after testing):
     # Generate and display list of vocab lessons
-    vocab_choices_list = generate_vocab_choices_list()
-    if not vocab_choices_list:
-        print("No vocabulary files found. Exiting.")
-        sys.exit()
+    # vocab_choices_list = generate_vocab_choices_list()
+    # if not vocab_choices_list:
+    #     print("No vocabulary files found. Exiting.")
+    #     sys.exit()
 
-    # Create a dictionary for easy selection and display the options
-    vocab_choices_dict = generate_vocab_choices_dict(vocab_choices_list)
-    print("\nSelect a lesson:")
-    vocab_choice = get_valid_user_selection(vocab_choices_dict)
-    selected_lesson = vocab_choices_dict[vocab_choice]
+    # # Create a dictionary for easy selection and display the options
+    # vocab_choices_dict = generate_vocab_choices_dict(vocab_choices_list)
+    # print("\nSelect a lesson:")
+    # vocab_choice = get_valid_user_selection(vocab_choices_dict)
+    # selected_lesson = vocab_choices_dict[vocab_choice]
 
-    # Generate the combined vocabulary dictionary for the selected lesson
-    combined_vocabulary_dict = generate_combined_vocabulary_dict(selected_lesson)
+    # # Generate the combined vocabulary dictionary for the selected lesson
+    # combined_vocabulary_dict = generate_combined_vocabulary_dict(selected_lesson)
 
-    # Allow the user to choose test length
-    test_length_choices = [('short', 5), ('full length', len(combined_vocabulary_dict['french_words'])), ('infinite', float('inf'))]
-    for i, (name, length) in enumerate(test_length_choices):
-        print(f'{i}. {name}')
+    # # Allow the user to choose test length
+    # test_length_choices = [('short', 5), ('full length', len(combined_vocabulary_dict['french_words'])), ('infinite', float('inf'))]
+    # for i, (name, length) in enumerate(test_length_choices):
+    #     print(f'{i}. {name}')
 
-    print('\nSelect your test length: ')
-    test_length_preference = get_valid_user_selection([str(i) for i in range(len(test_length_choices))])
-    test_length = test_length_choices[int(test_length_preference)][1]
+    # print('\nSelect your test length: ')
+    # test_length_preference = get_valid_user_selection([str(i) for i in range(len(test_length_choices))])
+    # test_length = test_length_choices[int(test_length_preference)][1]
 
-    # Start the quiz
-    quiz(test_length, test_length_choices, combined_vocabulary_dict)
+    # # Start the quiz
+    # quiz(test_length, test_length_choices, combined_vocabulary_dict)

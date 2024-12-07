@@ -1,4 +1,4 @@
-from quiz import generate_vocab_choices_list, generate_quiz_questions, generate_vocab_choices_dict, generate_combined_vocabulary_dict, get_valid_user_selection, generate_combined_vocabulary_dict, question_generator, print_missed_words, quiz
+from quiz import generate_vocab_choices_list, generate_quiz_questions, generate_combined_vocab_lesson, generate_combined_vocabulary_dict, generate_combined_vocabulary_dict
 from bottle import route, post, request, run, template, redirect, response
 from session_manager import random_id
 from unicodedata import normalize
@@ -39,7 +39,11 @@ def post_selected_lesson():
     selected_lesson = normalize('NFC', selected_lesson)
     session_id = request.get_cookie("session_id")
     # question_index = index[session_id]
-    vocab_dict = generate_combined_vocabulary_dict(selected_lesson)
+    print(selected_lesson)
+    if selected_lesson != 'combined':
+        vocab_dict = generate_combined_vocabulary_dict(selected_lesson)
+    else:
+        vocab_dict = generate_combined_vocab_lesson()
     quiz_questions = generate_quiz_questions(vocab_dict)
     quiz_questions_dict[session_id] = quiz_questions
     missed_words[session_id] = []

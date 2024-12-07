@@ -147,7 +147,7 @@
 
             setTimeout(function() {
                 document.getElementById('button-0').click(); 
-            }, 1000);
+            }, 750);
         }
 
         function showAlert(alertId) {
